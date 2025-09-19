@@ -1,0 +1,10 @@
+@import "@/tokens/primitive/typography.css";
+
+@layer utilities {
+    .typo-small {
+        font: var(--typography-small);
+    }
+    .typo-small-bold {
+        font: var(--typography-small-bold);
+    }
+}

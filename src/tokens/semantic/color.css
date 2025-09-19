@@ -1,0 +1,101 @@
+@import "../primitive/color.css";
+
+@theme {
+    /* Primary Intent Colors */
+    --color-primary: var(--color-primary-800);
+    --color-primary-strong: var(--color-primary-900);
+    --color-primary-dark: var(--color-primary-950);
+    --color-primary-light: var(--color-primary-700);
+    --color-primary-muted: var(--color-primary-500);
+    --color-primary-soft: var(--color-primary-100);
+
+    /* Secondary Intent Colors */
+    --color-secondary: var(--color-grey-900);
+    --color-secondary-subtle: var(--color-grey-800);
+    --color-secondary-light: var(--color-grey-600);
+    --color-secondary-muted: var(--color-grey-400);
+    --color-secondary-soft: var(--color-grey-100);
+
+    /* Error Intent Colors */
+    --color-error: var(--color-error-800);
+    --color-error-strong: var(--color-error-900);
+    --color-error-dark: var(--color-error-950);
+    --color-error-light: var(--color-error-700);
+    --color-error-muted: var(--color-error-500);
+    --color-error-soft: var(--color-error-200);
+
+    /* Disabled State Colors */
+    --color-disabled: var(--color-grey-500);
+    --color-disabled-subtle: var(--color-grey-400);
+    --color-disabled-light: var(--color-grey-300);
+    --color-disabled-soft: var(--color-grey-100);
+
+    /* Text Colors */
+    --color-text: var(--color-grey-900);
+    --color-text-subtle: var(--color-grey-400);
+    --color-text-muted: var(--color-grey-300);
+    --color-text-inverse: var(--color-white);
+
+    /* Background Colors */
+    --color-background: var(--color-white);
+    --color-background-subtle: var(--color-grey-100);
+    --color-background-muted: var(--color-grey-200);
+
+    /* Border Colors */
+    --color-border: var(--color-grey-300);
+    --color-border-subtle: var(--color-grey-200);
+    --color-border-strong: var(--color-grey-400);
+    --color-border-primary: var(--color-primary);
+    --color-border-secondary: var(--color-secondary);
+    --color-border-error: var(--color-error);
+
+    /* Ring Colors (Focus/Outline) */
+    --color-ring-primary: #01a8ef80;
+    --color-ring-secondary: #03071266;
+    --color-ring-error: #ff2d4280;
+
+    /* Sidebar Colors */
+    --color-sidebar: var(--color-background);
+    --color-sidebar-foreground: var(--color-text);
+    --color-sidebar-border: var(--color-border);
+    --color-sidebar-accent: var(--color-background-subtle);
+    --color-sidebar-accent-foreground: var(--color-text);
+    --color-sidebar-active: var(--color-primary-soft);
+    --color-sidebar-active-foreground: var(--color-primary-strong);
+
+    /* Popover Colors */
+    --color-popover: var(--color-background);
+    --color-popover-foreground: var(--color-text);
+    --color-popover-border: var(--color-border);
+    --color-popover-accent: var(--color-background-subtle);
+    --color-popover-accent-foreground: var(--color-text);
+    --color-popover-active: var(--color-primary-soft);
+    --color-popover-active-foreground: var(--color-primary-strong);
+
+    /* shadcn/ui 호환성을 위한 시맨틱 토큰 */
+    /* --background: var(--color-background); */
+    --color-foreground: var(--color-text);
+    --border: var(--color-border);
+    --input: var(--color-border);
+    --ring: var(--color-ring-primary);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-text-inverse);
+    --secondary: var(--color-secondary-soft);
+    --secondary-foreground: var(--color-secondary);
+    --destructive: var(--color-error);
+    --destructive-foreground: var(--color-text-inverse);
+    --muted: var(--color-background-subtle);
+    --muted-foreground: var(--color-text-subtle);
+    --accent: var(--color-background-subtle);
+    --accent-foreground: var(--color-text);
+    --card: var(--color-background);
+    --card-foreground: var(--color-text);
+    --popover: var(--color-background);
+    --popover-foreground: var(--color-text);
+    --radius: 0.5rem;
+
+    /* Ring Shadows (Focus states) */
+    --shadow-ring-primary: 0px 0px 0px 2px var(--color-ring-primary);
+    --shadow-ring-secondary: 0px 0px 0px 2px var(--color-ring-secondary);
+    --shadow-ring-error: 0px 0px 0px 2px var(--color-ring-error);
+}

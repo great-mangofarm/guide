@@ -1,0 +1,52 @@
+@theme {
+    /* Font Families */
+    --font-family-pretendard: "Pretendard", sans-serif;
+    --font-family-evermono: "EverMono", monospace;
+    --font-family-sans: var(--font-family-pretendard);
+    --font-family-mono: var(--font-family-evermono);
+
+    /* Font Sizes */
+    --font-size-h1-lg: 3rem; /* 48px */
+    --font-size-h1: 2.25rem; /* 36px */
+    --font-size-h2: 1.875rem; /* 30px */
+    --font-size-h3: 1.5rem; /* 24px */
+    --font-size-h4: 1.25rem; /* 20px */
+    --font-size-p: 1rem; /* 16px */
+    --font-size-lg: 1.125rem; /* 18px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-lead: 1.25rem; /* 20px */
+    --font-size-label: 0.875rem; /* 14px */
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* Line Heights */
+    --line-height-h1-lg: 3rem; /* 48px */
+    --line-height-h1: 2.5rem; /* 40px */
+    --line-height-h2: 2.25rem; /* 36px */
+    --line-height-h3: 2rem; /* 32px */
+    --line-height-h4: 1.75rem; /* 28px */
+    --line-height-p: 1.75rem; /* 28px */
+    --line-height-lead: 1.75rem; /* 28px */
+    --line-height-lg: 1.75rem; /* 28px */
+    --line-height-sm: 1.25rem; /* 20px */
+    --line-height-xs: 1rem; /* 16px */
+    --line-height-muted: 1.25rem; /* 20px */
+    --line-height-label: 0.875rem; /* 14px */
+    --line-height-button: 1.22rem; /* 19.5px */
+    --line-height-input: 1.5rem; /* 24px */
+    --line-height-helpertext: 0.75rem; /* 12px */
+    --line-height-cardtitle: 1.5rem; /* 24px */
+
+    /* Letter Spacing (자간) */
+    --letter-spacing-normal: 0;
+    --letter-spacing-tight: -0.02em; /* -2% */
+
+    /* Link specific - text-decoration */
+    --text-decoration-line: underline;
+}

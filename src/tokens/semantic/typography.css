@@ -1,0 +1,24 @@
+@import "@/tokens/primitive/typography.css";
+
+@theme {
+    /* Normal (Pretendard) Text Styles */
+    --typography-h1-lg: var(--font-weight-extrabold) var(--font-size-h1-lg)/var(--line-height-h1-lg) var(--font-family-pretendard);
+    --typography-h1: var(--font-weight-extrabold) var(--font-size-h1)/var(--line-height-h1) var(--font-family-pretendard);
+    --typography-h2: var(--font-weight-bold) var(--font-size-h2)/var(--line-height-h2) var(--font-family-pretendard);
+    --typography-h3: var(--font-weight-semibold) var(--font-size-h3)/1.5rem var(--font-family-pretendard); /* 24px line-height */
+    --typography-h4: var(--font-weight-semibold) var(--font-size-h4)/var(--line-height-h4) var(--font-family-pretendard);
+    --typography-p: var(--font-weight-regular) var(--font-size-p)/var(--line-height-p) var(--font-family-pretendard);
+    --typography-lead: var(--font-weight-regular) var(--font-size-lead)/var(--line-height-lead) var(--font-family-pretendard);
+    --typography-large: var(--font-weight-semibold) var(--font-size-lg)/var(--line-height-lg) var(--font-family-pretendard);
+    --typography-small-bold: var(--font-weight-bold) var(--font-size-sm)/var(--line-height-sm) var(--font-family-pretendard);
+    --typography-small: var(--font-weight-medium) var(--font-size-sm)/var(--line-height-sm) var(--font-family-pretendard);
+    --typography-label: var(--font-weight-semibold) var(--font-size-label)/var(--line-height-label) var(--font-family-pretendard);
+    --typography-link: var(--font-weight-medium) var(--font-size-sm)/var(--line-height-sm) var(--font-family-pretendard);
+    --typography-caption: var(--font-weight-medium) var(--font-size-xs)/var(--line-height-xs) var(--font-family-pretendard);
+    --typography-helper: var(--font-weight-medium) var(--font-size-xs)/var(--line-height-helpertext) var(--font-family-pretendard);
+
+    /* Mono (EverMono) Text Styles */
+    --typography-mono-num: var(--font-weight-medium) var(--font-size-sm) / var(--line-height-sm) var(--font-family-evermono);
+    --typography-mono-num-sm: var(--font-weight-medium) var(--font-size-xs) / var(--line-height-xs) var(--font-family-evermono);
+}
+
