@@ -1,32 +1,7 @@
 import { DocsLayout } from '@/components/layouts/DocsLayout'
 import { useGuide } from '@/contexts/GuideContext'
-
-const adminNavigation = [
-  {
-    title: "시작하기",
-    href: "/guide/epc/admin",
-    children: [
-      { title: "개요", href: "/guide/epc/admin#overview" },
-      { title: "로그인", href: "/guide/epc/admin#login" }
-    ]
-  },
-  {
-    title: "사용자 관리",
-    href: "/guide/epc/admin/users",
-    children: [
-      { title: "사용자 목록", href: "/guide/epc/admin/users#list" },
-      { title: "권한 관리", href: "/guide/epc/admin/users#permissions" }
-    ]
-  },
-  {
-    title: "시스템 설정",
-    href: "/guide/epc/admin/settings",
-    children: [
-      { title: "기본 설정", href: "/guide/epc/admin/settings#basic" },
-      { title: "고급 설정", href: "/guide/epc/admin/settings#advanced" }
-    ]
-  }
-]
+import {Typography} from "@/components/ui/typography.tsx";
+import {Callout} from "@/components/ui/callout.tsx";
 
 export default function EPCAdminGuide() {
   const { hasAccess } = useGuide()
@@ -44,28 +19,25 @@ export default function EPCAdminGuide() {
   }
 
   return (
-    <DocsLayout>{/* navigation={adminNavigation} */}
-      <div className="space-y-6">
-        <div className="space-y-2">
-          <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight">
-            EPC 업무지원 시스템 가이드
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            (에버온 임직원 전용)
-          </p>
-        </div>
-
-        {/* 개요 섹션 */}
-        <section id="overview">
+    <DocsLayout>
+      <img src="/assets/images/image12.png" className="absolute right-90 top-10 w-40" alt="장식"/>
+      <div className="bg-primary px-8 py-6 rounded-md">
+        <Typography variant='h1' className="text-text-inverse text-3xl" >EPC 업무지원 시스템 가이드</Typography>
+        <Typography variant='h4' className="text-text-inverse font-regular"> (에버온 임직원 전용)</Typography>
+      </div>
+      <div className="mt-12 space-y-6">
+        <section id="overview" className="space-y-6">
+          <Typography variant="small">
+            EPC 업무지원시스템은 업체등록부터 충전소 준공까지의 EPC 전체 프로세스를 관리하는 시스템입니다.<br/>
+            업무 진행 중 궁금한 점이 있으시면 이 가이드를 참고하여 효율적으로
+            시스템을 활용하실 수 있습니다.
+          </Typography>
+          <Typography variant='h4'>- ver 0.3.0 (2025.09.25)</Typography>
+          <Callout variant="warning">본 가이드는 2025년 9월 리뉴얼된 에버온 EPC 업무지원 시스템의 가이드 문서로, 에버온 임직원 전용입니다. 외부 노출을 금지합니다.</Callout>
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
             개요
           </h2>
           <div className="space-y-4 mt-4">
-            <p className="leading-7">
-              EPC 관리자 시스템은 회사의 전체 EPC 프로세스를 관리하고 모니터링할 수 있는 
-              강력한 도구입니다. 이 가이드를 통해 시스템의 모든 기능을 효과적으로 
-              활용하실 수 있습니다.
-            </p>
             
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
               <h3 className="font-semibold mb-2">주요 기능</h3>

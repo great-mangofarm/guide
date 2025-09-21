@@ -7,15 +7,15 @@ import {cn} from "@/lib/utils.ts";
 const typographyVariants = cva("text-text", {
     variants: {
         variant: {
-            h1: "typo-h1 lg:typo-h1-lg",
+            h1: "text-(length:--font-size-h1-lg) font-(--font-weight-extrabold)",
             h2: "typo-h2",
-            h3: "typo-h3",
-            h4: "typo-h4",
+            h3: "text-(length:--font-size-h3) font-(--font-weight-bold)",
+            h4: "text-(length:--font-size-h4) font-(--font-weight-semibold)",
             p: "typo-p",
             lead: "typo-lead",
             large: "typo-large",
             smallBold: "typo-small-bold",
-            small: "typo-small",
+            small: "text-(length:--font-size-small) font-(--font-weight-medium)",
             label: "typo-label",
             link: "typo-link",
             caption: "typo-caption",

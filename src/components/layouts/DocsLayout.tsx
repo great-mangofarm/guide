@@ -2,6 +2,7 @@ import type {ReactNode} from 'react'
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/AppSidebar'
 import { Header } from '@/components/Header'
+import { TableOfContents } from '@/components/TableOfContents'
 
 interface DocsLayoutProps {
   children: ReactNode
@@ -19,8 +20,9 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
           <SidebarProvider>
           <AppSidebar />
           <SidebarInset className="flex-1">
-            <div className="space-y-4 p-8">
+            <div className="relative space-y-4 p-6 xl:pr-80">
               {children}
+              <TableOfContents />
             </div>
           </SidebarInset>
           </SidebarProvider>
