@@ -11,7 +11,7 @@ export default function AddCompanyPage() {
         <Typography variant='h2'>업체 관리</Typography>
         <div className="space-y-4">
         <Typography variant='small' className="font-(--font-weight-medium) text-text-subtle">페이지: <Badge variant="subtle" >
-          운영관리 {'>'} 업체관리
+          운영 관리 {'>'} 업체 관리
         </Badge></Typography>
         <Callout variant="info">
           업체 관리는 EPC 업무지원시스템을 사용하여 EPC 업무 수행을 하는 협력업체들을 관리하는 기능입니다.<br />
