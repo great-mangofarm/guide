@@ -38,8 +38,8 @@ function App() {
         {/* 테스트 페이지 */}
         <Route path="/test" element={<TestPage />} />
         
-        {/* 기본 루트 - 적절한 가이드로 리다이렉트 */}
-        <Route path="/" element={<Navigate to="/test" replace />} />
+        {/* 기본 루트 - EPC Admin 가이드로 리다이렉트 */}
+        <Route path="/" element={<Navigate to="/guide/epc/admin" replace />} />
         
         {/* EPC 가이드 라우트 */}
         <Route path="/guide/epc/admin" element={<EPCAdminGuide />} />
