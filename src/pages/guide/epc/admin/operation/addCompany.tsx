@@ -22,9 +22,9 @@ export default function AddCompanyPage() {
         <section className="flex gap-4 w-full items-start justify-between">
           <div className="space-y-6 w-[66%]" >
             <div>
-              <Typography variant='h4' className="pb-1">1. 업체 등록 </Typography>
+              <Typography variant='h4' className="pb-1" id="company-registration">1. 업체 등록 </Typography>
               <div className='py-1.5'>
-                <Typography variant='h5' className="pb-1">1.1 정보 입력</Typography>
+                <Typography variant='h5' className="pb-1" id="info-input">1.1 정보 입력</Typography>
                 <Typography variant='small' className="p-0.25">• <strong>업체명</strong>: 협력업체의 이름 입력, 타업체와 중복불가</Typography>
                 <Typography variant='small' className="p-0.25">• <strong>업체 구분</strong>: 영업 / 공사 / 턴키 / 공장 중 선택, <strong>추후 변경 불가</strong></Typography>
                 <Typography variant='small' className="p-0.25">• <strong>주소</strong>: 검색 값 자동입력, 직접 입력 불가</Typography>
@@ -36,23 +36,23 @@ export default function AddCompanyPage() {
                 <Typography variant='small' className="p-0.25">• 이메일: 이메일 입력</Typography>
               </div>
               <div className='py-1.5'>
-                <Typography variant='h5' className="pb-1">1.2 등록</Typography>
+                <Typography variant='h5' className="pb-1" id="registration-process">1.2 등록</Typography>
                 <Typography variant='small' className="p-0.25">• 필수입력란을 각 형식에 맞게 입력 후 등록하기</Typography>
                 <Typography variant='small' className="p-0.25">• 등록된 업체의 경우 <strong>최초 ID/PASSWORD 모두 사업자등록번호로 생성</strong>되어 로그인 가능</Typography>
                 <Typography variant='small' className="p-0.25">• 등록된 업체의 경우 별도 정보 관리 화면에서 정보 수정 가능</Typography>
               </div>
             </div>
             <div>
-              <Typography variant='h4' className="pb-1">2. 업체 구분 정의 </Typography>
+              <Typography variant='h4' className="pb-1" id="company-types-definition">2. 업체 구분 정의 </Typography>
               <div className='py-1.5'>
-                <Typography variant='h5' className="pb-1">2.1 업체 구분</Typography>
+                <Typography variant='h5' className="pb-1" id="company-types">2.1 업체 구분</Typography>
                 <Typography variant='small' className="p-0.25">• <strong>영업</strong>: 현장에 대한 영업 및 실사 요청, 계약까지의 과정 담당</Typography>
                 <Typography variant='small' className="p-0.25">• <strong>공사</strong>: 실사 및 공사 과정 담당</Typography>
                 <Typography variant='small' className="p-0.25">• <strong>턴키</strong>: 영업 + 공사 모두 또는 각각의 과정 담당</Typography>
                 <Typography variant='small' className="p-0.25">• <strong>공장</strong>: 출고 요청받은 충전기의 출고 담당</Typography>
               </div>
               <div className='py-1.5'>
-                <Typography variant='h5' className="pb-1 font-semibold">2.1 업체 구분 별 권한 정리</Typography>
+                <Typography variant='h5' className="pb-1 font-semibold" id="company-permissions">2.2 업체 구분 별 권한 정리</Typography>
                 <div className='space-y-4 py-3'>
                 <div className='px-4 py-3 w-full rounded-lg bg-primary-soft'>
                   <Typography variant='smallBold' className="p-0.25">영업</Typography>

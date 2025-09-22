@@ -22,14 +22,14 @@ export default function CompaniesPage() {
 
           <section className="flex gap-4 w-full items-start justify-between">
               <div>
-                <Typography variant='h4' className="pb-1">1. 업체 정보 조회 및 수정 </Typography>
+                <Typography variant='h4' className="pb-1" id="company-info-management">1. 업체 정보 조회 및 수정 </Typography>
                 <div className='py-1.5'>
-                  <Typography variant='h5' className="pb-1">1.1 정보 조회 및 수정</Typography>
+                  <Typography variant='h5' className="pb-1" id="info-query-edit">1.1 정보 조회 및 수정</Typography>
                   <Typography variant='small' className="p-0.25">• 업체 데이터 테이블 클릭 시 상세 정보 조회 및 수정 가능</Typography>
                   <Typography variant='small' className="p-0.25">• <strong>업체 구분 / 사업자등록번호</strong>는 수정 불가</Typography>
                 </div>
                 <div className='py-1.5'>
-                  <Typography variant='h5' className="pb-1">1.2 연동 업체 등록 </Typography>
+                  <Typography variant='h5' className="pb-1" id="linked-company-registration">1.2 연동 업체 등록 </Typography>
                 <Quote title="연동업체란?">
                     • 영업↔공사, 턴키↔공사 등 서로 다른 구분의 업체끼리 연동되어야만,하나의 계약~공사 건을 진행 가능 <br />
                     • 계약을 진행하는 영업(혹은 턴키)업체는 연동된 공사(혹은 턴키)업체만 실사 및 공사업체로 지정 가능 <br />
@@ -39,7 +39,7 @@ export default function CompaniesPage() {
                   <Typography variant='small' className="p-0.25">• 공장 업체는 연동 업체 추가 불가</Typography>
                 </div>
                 <div className='py-1.5'>
-                  <Typography variant='h5' className="pb-1">1.3 비밀번호 초기화 </Typography>
+                  <Typography variant='h5' className="pb-1" id="password-reset">1.3 비밀번호 초기화 </Typography>
                   <Typography variant='small' className="p-0.25">• 비밀번호 초기화 시 초기 비밀번호<strong>(업체의 사업자비밀번호)</strong>로 해당 업체 비밀번호 초기화</Typography>
                 </div>
             </div>
@@ -47,9 +47,9 @@ export default function CompaniesPage() {
           </section>
           <section className="flex gap-4 w-full items-start justify-between">
               <div >
-                <Typography variant='h4' className="pb-1">2. 업체 문서 관리 </Typography>
+                <Typography variant='h4' className="pb-1" id="company-document-management">2. 업체 문서 관리 </Typography>
                 <div className='py-1.5'>
-                  <Typography variant='h5' className="pb-1">2.1 문서 관리</Typography>
+                  <Typography variant='h5' className="pb-1" id="document-management">2.1 문서 관리</Typography>
                   <Typography variant='small' className="p-0.25">• 업체가 업로드한 해당 업체의 <strong>사업자등록증 / 통장사본 / 지명원</strong> 파일 검수 관리 </Typography>
                   <Typography variant='small' className="p-0.25">• 파일 다운로드 후 검수 / 반려 상태 저장 가능</Typography>
                   <Typography variant='small' className="p-0.25">• 업체가 재업로드했을 경우 미검수 상태로 초기화</Typography>
