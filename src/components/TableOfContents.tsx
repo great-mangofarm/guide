@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import {Typography} from "@/components/ui/typography.tsx";
 
 interface TocItem {
   id: string
@@ -11,8 +12,8 @@ export function TableOfContents() {
   const [activeId, setActiveId] = useState<string>("")
 
   useEffect(() => {
-    // 페이지의 모든 헤딩 요소를 찾아서 목차 생성
-    const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6")
+    // 페이지의 h3, h4 헤딩 요소만 찾아서 목차 생성
+    const headings = document.querySelectorAll("h3, h4, h5")
     const items: TocItem[] = []
 
     headings.forEach((heading, index) => {
@@ -72,11 +73,11 @@ export function TableOfContents() {
   }
 
   return (
-    <div className="fixed right-4 top-20 w-64 hidden xl:block z-10">
-      <div className="bg-background border rounded-lg p-4 shadow-sm">
-        <h4 className="text-sm font-semibold mb-3 text-foreground">
-          이 페이지의 내용
-        </h4>
+    <div className="h-full w-50">
+      <div className="sticky top-4">
+        <Typography variant="caption" className="font-(--font-weight-bold) text-text-subtle">
+          목차
+        </Typography>
         
         <nav className="space-y-1">
           {tocItems.map((item) => (
@@ -84,16 +85,16 @@ export function TableOfContents() {
               key={item.id}
               onClick={() => scrollToHeading(item.id)}
               className={`
-                block w-full text-left text-sm py-1 px-2 rounded transition-colors
-                hover:bg-muted hover:text-foreground
-                ${item.level === 1 ? 'pl-2' : ''}
-                ${item.level === 2 ? 'pl-4' : ''}
-                ${item.level === 3 ? 'pl-6' : ''}
-                ${item.level >= 4 ? 'pl-8' : ''}
+                block w-full text-left text-xs py-1 px-2 rounded-md transition-colors cursor-pointer
+                hover:bg-primary-soft hover:text-text
+                ${item.level === 3 ? 'pl-2' : ''}
+                ${item.level === 4 ? 'pl-4' : ''}
+                ${item.level === 5 ? 'pl-6' : ''}
+                ${item.level >= 6 ? 'pl-8' : ''}
                 ${
                   activeId === item.id
-                    ? 'bg-primary text-primary-foreground font-medium'
-                    : 'text-muted-foreground'
+                    ? 'bg-primary-muted text-text font-medium'
+                    : 'text-text-subtle'
                 }
               `}
             >

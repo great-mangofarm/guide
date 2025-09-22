@@ -19,9 +19,14 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
         <div className="flex flex-1">
           <SidebarProvider>
           <AppSidebar />
-          <SidebarInset className="flex-1">
-            <div className="relative space-y-4 p-6 xl:pr-80">
+          <SidebarInset className="flex-1 flex mt-14">
+            {/* 메인 컨텐츠 영역 */}
+            <div className="flex-1 space-y-4 py-6 pr-6 pl-12">
               {children}
+            </div>
+            
+            {/* TOC 영역 - 360px 고정 너비 */}
+            <div className="w-[320px] pt-6 pl-12">
               <TableOfContents />
             </div>
           </SidebarInset>

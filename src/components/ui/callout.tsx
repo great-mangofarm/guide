@@ -8,7 +8,7 @@ const calloutVariants = cva(
     variants: {
       variant: {
         info: "[background-color:var(--color-primary-soft)] [border-color:var(--color-primary-light)] [color:var(--color-primary-strong)]",
-        success: "[background-color:var(--color-primary-soft)] [border-color:var(--color-primary-light)] [color:var(--color-primary-strong)]", // 임시로 primary 사용
+        success: "[background-color:var(--color-secondary-soft)] [border-color:var(--color-secondary-light)] [color:var(--color-secondary)]", // 임시로 primary 사용
         warning: "[background-color:var(--color-warning-100)] [border-color:var(--color-warning-400)] [color:var(--color-warning-900)]",
         error: "[background-color:var(--color-error-soft)] [border-color:var(--color-error-light)] [color:var(--color-error-strong)]",
       },
@@ -23,7 +23,7 @@ const iconVariants = cva("flex-shrink-0 w-5 h-5 mt-0.5", {
   variants: {
     variant: {
       info: "[color:var(--color-primary)]",
-      success: "[color:var(--color-primary)]", // 임시로 primary 사용
+      success: "[color:var(--color-secondary)]", // 임시로 primary 사용
       warning: "[color:var(--color-warning-800)]",
       error: "[color:var(--color-error)]",
     },

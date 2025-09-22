@@ -26,7 +26,7 @@ const epcAdminMenuGroups = [
     label: "운영 관리",
     icon: Building2,
     items: [
-      { title: "업체등록", url: "/guide/epc/admin/operation/addCompany" },
+      { title: "업체 관리", url: "/guide/epc/admin/operation/addCompany" },
       { title: "업체 정보 관리", url: "/guide/epc/admin/operation/companies" },
     ]
   },

@@ -10,8 +10,8 @@
     --color-primary-soft: var(--color-primary-100);
 
     /* Secondary Intent Colors */
-    --color-secondary: var(--color-grey-900);
-    --color-secondary-subtle: var(--color-grey-800);
+    --color-secondary: var(--color-grey-800);
+    --color-secondary-subtle: var(--color-grey-700);
     --color-secondary-light: var(--color-grey-600);
     --color-secondary-muted: var(--color-grey-400);
     --color-secondary-soft: var(--color-grey-100);
@@ -22,7 +22,15 @@
     --color-error-dark: var(--color-error-950);
     --color-error-light: var(--color-error-700);
     --color-error-muted: var(--color-error-500);
-    --color-error-soft: var(--color-error-200);
+    --color-error-soft: var(--color-error-100);
+
+    /* warning Intent Colors */
+    --color-warning: var(--color-warning-800);
+    --color-warning-strong: var(--color-warning-900);
+    --color-warning-dark: var(--color-warning-950);
+    --color-warning-light: var(--color-warning-700);
+    --color-warning-muted: var(--color-warning-500);
+    --color-warning-soft: var(--color-warning-100);
 
     /* Disabled State Colors */
     --color-disabled: var(--color-grey-500);
@@ -31,8 +39,8 @@
     --color-disabled-soft: var(--color-grey-100);
 
     /* Text Colors */
-    --color-text: var(--color-grey-900);
-    --color-text-subtle: var(--color-grey-400);
+    --color-text: var(--color-grey-800);
+    --color-text-subtle: var(--color-grey-500);
     --color-text-muted: var(--color-grey-300);
     --color-text-inverse: var(--color-white);
 

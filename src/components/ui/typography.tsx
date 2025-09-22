@@ -8,17 +8,19 @@ const typographyVariants = cva("text-text", {
     variants: {
         variant: {
             h1: "text-(length:--font-size-h1-lg) font-(--font-weight-extrabold)",
-            h2: "typo-h2",
-            h3: "text-(length:--font-size-h3) font-(--font-weight-bold)",
-            h4: "text-(length:--font-size-h4) font-(--font-weight-semibold)",
+            h2: "text-(length:--font-size-h2) font-(--font-weight-bold)",
+            h3: "text-(length:--font-size-h3) font-(--font-weight-bold) leading-(--line-height-h3)",
+            h4: "text-(length:--font-size-h4) font-(--font-weight-semibold) leading-(--line-height-h4)",
+            h5: "text-lg font-(--font-weight-semibold)",
             p: "typo-p",
-            lead: "typo-lead",
-            large: "typo-large",
-            smallBold: "typo-small-bold",
-            small: "text-(length:--font-size-small) font-(--font-weight-medium)",
+            lead: "text-(length:--font-size-lead) ",
+            large: "text-lg font-(--font-weight-medium)",
+            medium: "text-(length:--font-size-p) font-(--font-weight-medium)",
+            smallBold: "text-sm font-(--font-weight-bold) leading-(--line-height-sm)",
+            small: "text-sm font-(--font-weight-regular) leading-(--line-height-sm)",
             label: "typo-label",
             link: "typo-link",
-            caption: "typo-caption",
+            caption: "text-xs font-(--font-weight-medium)",
             helper: "typo-helper",
             monoNum: "typo-mono-num",
             monoNumSm: "typo-mono-num-sm",
@@ -42,12 +44,15 @@ const defaultTagByVariant = (v?: Variant): AsElement => {
             return "h3";
         case "h4":
             return "h4";
+        case "h5":
+            return "h5";
         case "label":
             return "label";
         case "link":
             return "a";
         default:
             return "p";
+
     }
 };
 

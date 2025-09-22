@@ -1,6 +1,6 @@
 import { Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
-import SmallLogo from "~public/assets/logos/mobile-logo.svg?react"
+import SmallLogo from "@/assets/mobile-logo.svg?react"
 import {Typography} from "@/components/ui/typography.tsx";
 import { useLocation } from "react-router-dom";
 
@@ -30,7 +30,7 @@ export const Header = () => {
   const title = role ? `${app} ${role} Guide` : `${app} Docs`
 
   return (
-    <header className="w-full border-b border-border bg-background z-20">
+    <header className="fixed w-full border-b border-border bg-background z-20">
       <div className="container relative flex h-14 max-w-screen-2xl items-center">
         {/* Logo */}
         <div className="ml-4 mr-6 flex items-center space-x-2">
