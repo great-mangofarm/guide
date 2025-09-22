@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { GuideProvider } from '@/contexts/GuideContext'
+import { GuideProvider } from '@/components/GuideProvider'
 import { DebugGuideContext } from '@/components/DebugGuideContext'
 import EPCAdminGuide from '@/pages/guide/epc/admin'
 import EPCCompanyGuide from '@/pages/guide/epc/company'

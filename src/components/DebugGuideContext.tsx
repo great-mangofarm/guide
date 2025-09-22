@@ -1,10 +1,10 @@
-import { useGuide } from '@/contexts/GuideContext'
+import { useGuide } from '@/hooks/useGuide'
 
 export const DebugGuideContext = () => {
   const { app, userType, isMangoAdmin, hasAccess, updateFromUrl } = useGuide()
 
   return (
-    <div className="fixed bottom-4 right-4 bg-card border border-border rounded-lg p-4 shadow-lg max-w-sm">
+    <div className="hidden fixed bottom-4 right-4 bg-card border border-border rounded-lg p-4 shadow-lg max-w-sm">
       <h3 className="text-sm font-semibold mb-2 text-foreground">🐛 Guide Context Debug</h3>
       
       <div className="space-y-2 text-xs">

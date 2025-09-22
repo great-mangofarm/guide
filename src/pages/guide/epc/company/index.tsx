@@ -1,32 +1,5 @@
 import { DocsLayout } from '@/components/layouts/DocsLayout'
-import { useGuide } from '@/contexts/GuideContext'
-
-const companyNavigation = [
-  {
-    title: "시작하기",
-    href: "/guide/epc/company",
-    children: [
-      { title: "개요", href: "/guide/epc/company#overview" },
-      { title: "로그인", href: "/guide/epc/company#login" }
-    ]
-  },
-  {
-    title: "프로젝트 관리",
-    href: "/guide/epc/company/projects",
-    children: [
-      { title: "프로젝트 생성", href: "/guide/epc/company/projects#create" },
-      { title: "진행 상황 확인", href: "/guide/epc/company/projects#status" }
-    ]
-  },
-  {
-    title: "문서 관리",
-    href: "/guide/epc/company/documents",
-    children: [
-      { title: "문서 업로드", href: "/guide/epc/company/documents#upload" },
-      { title: "승인 요청", href: "/guide/epc/company/documents#approval" }
-    ]
-  }
-]
+import { useGuide } from '@/hooks/useGuide'
 
 export default function EPCCompanyGuide() {
   const { hasAccess } = useGuide()
@@ -44,7 +17,7 @@ export default function EPCCompanyGuide() {
   }
 
   return (
-    <DocsLayout title="EPC Company Guide">{/* navigation={companyNavigation} */}
+    <DocsLayout>
       <div className="space-y-6">
         {/* 페이지 헤더 */}
         <div className="space-y-2">

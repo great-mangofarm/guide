@@ -1,5 +1,5 @@
 import { DocsLayout } from '@/components/layouts/DocsLayout'
-import { useGuide } from '@/contexts/GuideContext'
+import { useGuide } from '@/hooks/useGuide'
 import {Typography} from "@/components/ui/typography.tsx";
 import {Callout} from "@/components/ui/callout.tsx";
 import {PrevNextButtons} from "@/components/PrevNextButtons.tsx";
