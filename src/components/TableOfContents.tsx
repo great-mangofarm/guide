@@ -48,23 +48,20 @@ export function TableOfContents() {
           setActiveId(topEntry.target.id)
         } else {
           // 아무것도 보이지 않으면 스크롤 위치 기반으로 가장 가까운 것 선택
-          const allElements = tocItems.map(item => document.getElementById(item.id)).filter(Boolean)
+          const allElements = tocItems.map(item => document.getElementById(item.id)).filter((el): el is HTMLElement => el !== null)
           const scrollTop = window.pageYOffset + 100 // 헤더 높이 고려
           
-          let closestElement = null
+          let closestElement: HTMLElement | null = null
           let closestDistance = Infinity
-          
-          allElements.forEach(element => {
-            if (element) {
-              const elementTop = element.offsetTop
-              const distance = Math.abs(elementTop - scrollTop)
-              if (distance < closestDistance) {
-                closestDistance = distance
-                closestElement = element
-              }
+
+          for (const element of allElements) {
+            const elementTop = element.offsetTop
+            const distance = Math.abs(elementTop - scrollTop)
+            if (distance < closestDistance) {
+              closestDistance = distance
+              closestElement = element
             }
-          })
-          
+          }
           if (closestElement) {
             setActiveId(closestElement.id)
           }
@@ -107,7 +104,7 @@ export function TableOfContents() {
 
   return (
     <div className="h-full w-50">
-      <div className="sticky top-4">
+      <div className="sticky top-18">
         <Typography variant="caption" className="font-(--font-weight-bold) text-text-subtle">
           목차
         </Typography>
