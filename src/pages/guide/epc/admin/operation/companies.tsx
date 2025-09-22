@@ -60,12 +60,12 @@ export default function CompaniesPage() {
           </section>
           <PrevNextButtons
               previousPage={{
-                href: "/guide/epc/admin",
-                title: "EPC 시작하기"
+                href: "/guide/epc/admin/operation/addCompany",
+                title: "업체 관리"
               }}
               nextPage={{
-                href: "/guide/epc/admin/operation/companies",
-                title: "업체 정보 관리"
+                href: "/guide/epc/admin/pre-contract/addSite",
+                title: "현장 관리"
               }}
           />
         </div>
