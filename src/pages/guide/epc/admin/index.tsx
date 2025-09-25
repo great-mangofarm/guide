@@ -80,8 +80,8 @@ export default function EPCAdminGuide() {
         {/* 페이지 네비게이션 */}
         <PrevNextButtons
           nextPage={{
-            href: "/guide/epc/admin/operation/addCompany",
-            title: "업체 관리"
+            href: "/guide/epc/admin/process",
+            title: "EPC 업무 플로우"
           }}
         />
       </div>

@@ -1,4 +1,4 @@
-import { Home, BookOpen, Settings, HelpCircle, BookOpenCheck, Building2, FileText, Construction, Package } from "lucide-react"
+import { Home, BookOpen, Settings, HelpCircle, BookOpenCheck, Workflow, Building2, FileText, Construction, Package } from "lucide-react"
 import { useLocation } from "react-router-dom"
 import { useCallback } from "react"
 import {
@@ -18,6 +18,11 @@ const epcAdminMenuItems = [
     title: "EPC 시작하기",
     url: "/guide/epc/admin",
     icon: BookOpenCheck,
+  },
+  {
+    title: "EPC 플로우",
+    url: "/guide/epc/admin/process",
+    icon: Workflow,
   }
 ]
 

@@ -22,7 +22,7 @@ export default function AddCompanyPage() {
         <section className="flex gap-4 w-full items-start justify-between">
           <div className="space-y-6 w-[66%]" >
             <div>
-              <Typography variant='h4' className="pb-1" id="company-registration">1. 업체 등록 </Typography>
+           g   <Typography variant='h4' className="pb-1" id="company-registration">1. 업체 등록 </Typography>
               <div className='py-1.5'>
                 <Typography variant='h5' className="pb-1" id="info-input">1.1 정보 입력</Typography>
                 <Typography variant='small' className="p-0.25">• <strong>업체명</strong>: 협력업체의 이름 입력, 타업체와 중복불가</Typography>

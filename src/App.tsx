@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { GuideProvider } from '@/components/GuideProvider'
 import { DebugGuideContext } from '@/components/DebugGuideContext'
 import EPCAdminGuide from '@/pages/guide/epc/admin'
+import EPCAdminProcess from "@/pages/guide/epc/admin/process.tsx";
 import EPCCompanyGuide from '@/pages/guide/epc/company'
 import TestPage from '@/pages/TestPage'
 
@@ -40,7 +41,7 @@ function App() {
         
         {/* 기본 루트 - EPC Admin 가이드로 리다이렉트 */}
         <Route path="/" element={<Navigate to="/guide/epc/admin" replace />} />
-        
+        <Route path="/guide/epc/admin/process" element={<EPCAdminProcess />} />
         {/* EPC 가이드 라우트 */}
         <Route path="/guide/epc/admin" element={<EPCAdminGuide />} />
         <Route path="/guide/epc/company" element={<EPCCompanyGuide />} />
