@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import type { JSX } from "react";
 import {cn} from "@/lib/utils.ts";
 
-const typographyVariants = cva("text-text", {
+const typographyVariants = cva("text-text break-keep", {
     variants: {
         variant: {
             h1: "text-(length:--font-size-h1-lg) font-(--font-weight-extrabold)",

@@ -6,6 +6,8 @@ import DownLeftArrow from "@/assets/down_singleflex.svg?react"
 import DownRightDualArrow from "@/assets/singletodual.svg?react"
 import LeftArrow from "@/assets/shortleft.svg?react"
 import DownRightFlexArrow from "@/assets/downsingleflex.svg?react"
+import DownErrorArrow from "@/assets/error-down-arrow.svg?react"
+import {PrevNextButtons} from "@/components/PrevNextButtons.tsx";
 
 export default function EPCAdminProcess() {
     return (
@@ -13,8 +15,14 @@ export default function EPCAdminProcess() {
             <div className="space-y-6">
                 <Typography variant='h2'>EPC 업무 플로우</Typography>
 
-                <div className="w-full flex flex-col -space-y-0.5 justify-cente items-center">
-                <div>
+                <div className="w-full flex flex-col -space-y-0.5 justify-center items-center p-12 bg-grey-50 rounded-lg">
+                    <div className='w-full flex flex-col gap-0.5 mb-8 -ml-6'>
+                    <Typography variant="small" >업무 프로세스 진행 중 데이터 오류, 재작업, 업무 혼선을 방지하고 데이터 정합성을 보장하기 위해 단계별 제약 조건을 적용하고 있습니다.</Typography>
+                    <Typography variant="small" >• <strong>순차적 진행 원칙:</strong> 이전 단계의 필수 작업이 완료되어야 다음 단계로 진행 가능</Typography>
+                    <Typography variant="small" >• <strong>단계별 잠금 기능:</strong> 정 단계 이후에는 이전 단계의 데이터 수정이 제한</Typography>
+                    <Typography variant="small" >• <strong>데이터 정합성 보장:</strong> 단계별 데이터 간 일관성과 무결성을 유지</Typography>
+                    </div>
+                    <div>
                     <div className="border-warning border-1 bg-warning-soft w-100 rounded-md p-4">
                         <Typography variant="medium" className="font-bold">
                             업체 관리  <Badge variant="warning"  className="ml-1 align-text-top">운영 관리 {'>'} 업체 관리</Badge>
@@ -106,8 +114,9 @@ export default function EPCAdminProcess() {
                         <Typography variant='smallBold' className="p-0.25">• 입고된 충전기만 출고 가능</Typography>
                     </div>
                 </div>
-
-                    <DownRightDualArrow className="z-10"/>
+<div  className="z-10 flex">
+    <DownRightDualArrow className='pl-5' /> <DownErrorArrow className='ml-10 z-10'/>
+</div>
                 <div className="flex -space-x-0.5 items-center">
                     <div className="border-primary border-1 bg-primary-soft w-100 rounded-md p-4">
                         <Typography variant="medium" className="font-bold">
@@ -141,6 +150,16 @@ export default function EPCAdminProcess() {
                     <Typography variant='small' className="p-0.25 "><strong>• 필수 서류 검수 완료 시 EPC 내 프로세스 완료</strong></Typography>
                 </div>
                 </div>
+                <PrevNextButtons
+                    previousPage={{
+                        href: "/guide/epc/admin",
+                        title: "EPC 시작하기"
+                    }}
+                    nextPage={{
+                        href: "/guide/epc/admin/operation/companies",
+                        title: "업체 정보 관리"
+                    }}
+                />
             </div>
         </DocsLayout>
     )

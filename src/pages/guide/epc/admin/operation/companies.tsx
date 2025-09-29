@@ -65,7 +65,7 @@ export default function CompaniesPage() {
               }}
               nextPage={{
                 href: "/guide/epc/admin/pre-contract/addSite",
-                title: "현장 관리"
+                title: "현장 정보 관리"
               }}
           />
         </div>

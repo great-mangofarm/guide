@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 import {Typography} from "@/components/ui/typography.tsx";
 
 interface PageLink {
@@ -19,14 +20,14 @@ export function PrevNextButtons({ previousPage, nextPage }: PrevNextButtonsProps
       <div>
         {previousPage ? (
           <Button variant="ghost" asChild>
-            <a href={previousPage.href} className="flex flex-col items-start !gap-0.5 group">
+            <Link to={previousPage.href} className="flex flex-col items-start !gap-0.5 group">
                 <Typography variant="caption" className="text-text-subtle group-hover:text-gray-950">이전</Typography>
                 <div className="flex gap-2 items-center group-hover:text-gray-950">
                     <ArrowLeft className="h-4 w-4 text-text-subtle group-hover:text-gray-950" />
                     {previousPage.title}
                 </div>
 
-            </a>
+            </Link>
           </Button>
         ) : (
           <div />
@@ -37,13 +38,13 @@ export function PrevNextButtons({ previousPage, nextPage }: PrevNextButtonsProps
       <div>
         {nextPage ? (
             <Button variant="ghost" asChild>
-                <a href={nextPage.href} className="flex flex-col items-start !gap-0.5 group">
+                <Link to={nextPage.href} className="flex flex-col items-start !gap-0.5 group">
                     <Typography variant="caption" className="text-text-subtle group-hover:text-gray-950">다음</Typography>
                     <div className="flex gap-2 items-center group-hover:text-gray-950">
                         {nextPage.title}
                     <ArrowRight className="h-4 w-4 text-text-subtle group-hover:text-gray-950" />
                     </div>
-                </a>
+                </Link>
             </Button>
         ) : (
           <div />

@@ -1,10 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { GuideProvider } from '@/components/GuideProvider'
 import { DebugGuideContext } from '@/components/DebugGuideContext'
+import { ScrollToTop } from '@/components/ScrollToTop'
 import EPCAdminGuide from '@/pages/guide/epc/admin'
 import EPCAdminProcess from "@/pages/guide/epc/admin/process.tsx";
 import EPCCompanyGuide from '@/pages/guide/epc/company'
 import TestPage from '@/pages/TestPage'
+import FAQPage from '@/pages/guide/epc/admin/faq'
 
 // 운영 관리
 import AddCompanyPage from '@/pages/guide/epc/admin/operation/addCompany.tsx'
@@ -14,7 +16,6 @@ import CompaniesPage from '@/pages/guide/epc/admin/operation/companies.tsx'
 import AddSitePage from '@/pages/guide/epc/admin/pre-contract/addSite.tsx'
 import SitesPage from '@/pages/guide/epc/admin/pre-contract/sites.tsx'
 import SalesPage from '@/pages/guide/epc/admin/pre-contract/sales.tsx'
-import RequestInspectionPage from '@/pages/guide/epc/admin/pre-contract/requestInspection.tsx'
 import InspectionsPage from '@/pages/guide/epc/admin/pre-contract/inspections.tsx'
 
 // 계약 관리
@@ -25,7 +26,6 @@ import ApprovalPage from '@/pages/guide/epc/admin/contract/approval.tsx'
 // 공사 관리
 import RequestPage from '@/pages/guide/epc/admin/construction/request.tsx'
 import ConstructionExecutionPage from '@/pages/guide/epc/admin/construction/constructionExecution.tsx'
-import ConstructionInspectionPage from '@/pages/guide/epc/admin/construction/constructionInspection.tsx'
 import ResultPage from '@/pages/guide/epc/admin/construction/result.tsx'
 
 // 물동관리
@@ -35,9 +35,13 @@ import OutboundPage from '@/pages/guide/epc/admin/inventory/outbound.tsx'
 function App() {
   return (
     <GuideProvider>
+      <ScrollToTop />
       <Routes>
         {/* 테스트 페이지 */}
         <Route path="/test" element={<TestPage />} />
+        
+        {/* FAQ 페이지 */}
+        <Route path="/guide/epc/admin/faq" element={<FAQPage />} />
         
         {/* 기본 루트 - EPC Admin 가이드로 리다이렉트 */}
         <Route path="/" element={<Navigate to="/guide/epc/admin" replace />} />
@@ -54,7 +58,6 @@ function App() {
         <Route path="/guide/epc/admin/pre-contract/addSite" element={<AddSitePage />} />
         <Route path="/guide/epc/admin/pre-contract/sites" element={<SitesPage />} />
         <Route path="/guide/epc/admin/pre-contract/sales" element={<SalesPage />} />
-        <Route path="/guide/epc/admin/pre-contract/requestInspection" element={<RequestInspectionPage />} />
         <Route path="/guide/epc/admin/pre-contract/inspections" element={<InspectionsPage />} />
         
         {/* 계약 관리 */}
@@ -65,7 +68,6 @@ function App() {
         {/* 공사 관리 */}
         <Route path="/guide/epc/admin/construction/request" element={<RequestPage />} />
         <Route path="/guide/epc/admin/construction/constructionExecution" element={<ConstructionExecutionPage />} />
-        <Route path="/guide/epc/admin/construction/constructionInspection" element={<ConstructionInspectionPage />} />
         <Route path="/guide/epc/admin/construction/result" element={<ResultPage />} />
         
         {/* 물동관리 */}

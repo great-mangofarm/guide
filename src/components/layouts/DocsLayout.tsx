@@ -1,4 +1,6 @@
 import type {ReactNode} from 'react'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/AppSidebar'
 import { Header } from '@/components/Header'
@@ -9,9 +11,36 @@ interface DocsLayoutProps {
 }
 
 export const DocsLayout = ({ children }: DocsLayoutProps) => {
+  const location = useLocation()
+
+  // URL hash 처리 - FAQ 페이지가 아닌 일반 페이지의 헤딩 스크롤
+  useEffect(() => {
+    const hash = location.hash.replace('#', '')
+    if (hash && !location.pathname.includes('/faq')) {
+      // FAQ 페이지가 아닌 경우에만 일반 헤딩 스크롤 처리
+      setTimeout(() => {
+        scrollToElement(hash)
+      }, 300)
+    }
+  }, [location.hash, location.pathname])
+
+  const scrollToElement = (elementId: string) => {
+    const element = document.getElementById(elementId)
+    if (element) {
+      const headerHeight = 56 // 헤더 높이
+      const elementTop = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetTop = elementTop - headerHeight - 16
+      
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      })
+    }
+  }
+
   return (
 
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col pb-9">
         {/* Header - 전체 상단 */}
         <Header />
 

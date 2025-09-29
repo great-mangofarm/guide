@@ -1,5 +1,5 @@
-import { Home, BookOpen, Settings, HelpCircle, BookOpenCheck, Workflow, Building2, FileText, Construction, Package } from "lucide-react"
-import { useLocation } from "react-router-dom"
+import { Home, BookOpen, Settings, HelpCircle, BookOpenCheck, Workflow, Building2, FileText, Construction, Package, TrafficCone } from "lucide-react"
+import { useLocation, Link } from "react-router-dom"
 import { useCallback } from "react"
 import {
   Sidebar,
@@ -40,9 +40,7 @@ const epcAdminMenuGroups = [
     icon: FileText,
     items: [
       { title: "현장등록", url: "/guide/epc/admin/pre-contract/addSite" },
-      { title: "현장 정보 관리", url: "/guide/epc/admin/pre-contract/sites" },
       { title: "영업 진행 관리", url: "/guide/epc/admin/pre-contract/sales" },
-      { title: "실사 요청", url: "/guide/epc/admin/pre-contract/requestInspection" },
       { title: "실사 관리", url: "/guide/epc/admin/pre-contract/inspections" },
     ]
   },
@@ -60,8 +58,7 @@ const epcAdminMenuGroups = [
     icon: Construction,
     items: [
       { title: "공사 요청 관리", url: "/guide/epc/admin/construction/request" },
-      { title: "공사 진행 (입고~완공)", url: "/guide/epc/admin/construction/constructionExecution" },
-      { title: "공사 진행 (완공~점검)", url: "/guide/epc/admin/construction/constructionInspection" },
+      { title: "공사 진행 현황", url: "/guide/epc/admin/construction/constructionExecution" },
       { title: "공사 결과 관리", url: "/guide/epc/admin/construction/result" },
     ]
   },
@@ -142,10 +139,10 @@ export function AppSidebar() {
                 {epcAdminMenuItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild isActive={isActiveMenu(item.url)}>
-                      <a href={item.url}>
+                      <Link to={item.url}>
                         <item.icon />
                         <span>{item.title}</span>
-                      </a>
+                      </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
@@ -162,9 +159,9 @@ export function AppSidebar() {
                   {group.items.map((item) => (
                     <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton asChild isActive={isActiveMenu(item.url)}>
-                        <a href={item.url}>
+                        <Link to={item.url}>
                           <span>{item.title}</span>
-                        </a>
+                        </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
                   ))}
@@ -172,6 +169,22 @@ export function AppSidebar() {
               </SidebarGroupContent>
             </SidebarGroup>
           ))}
+          
+          {/* FAQ 섹션 - 하단에 추가 */}
+          <SidebarGroup>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                <SidebarMenuItem>
+                  <SidebarMenuButton asChild isActive={isActiveMenu("/guide/epc/admin/faq")}>
+                    <Link to="/guide/epc/admin/faq">
+                      <TrafficCone />
+                      <span>자주 묻는 질문 (FAQ)</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
         </SidebarContent>
       </Sidebar>
     )
@@ -188,10 +201,10 @@ export function AppSidebar() {
               {defaultMenuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild isActive={isActiveMenu(item.url)}>
-                    <a href={item.url}>
+                    <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
